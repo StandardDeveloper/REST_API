@@ -1,0 +1,98 @@
+PODS:
+  - Alamofire (5.4.3)
+  - BRYXBanner (0.8.4)
+  - ExpyTableView (1.2.1)
+  - FBSDKCoreKit (9.3.0):
+    - FBSDKCoreKit/Basics (= 9.3.0)
+    - FBSDKCoreKit/Core (= 9.3.0)
+  - FBSDKCoreKit/Basics (9.3.0)
+  - FBSDKCoreKit/Core (9.3.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (9.3.0):
+    - FBSDKLoginKit/Login (= 9.3.0)
+  - FBSDKLoginKit/Login (9.3.0):
+    - FBSDKCoreKit (~> 9.3.0)
+  - Kingfisher (6.3.0)
+  - MarqueeLabel (4.0.5)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - NotificationBannerSwift (2.5.0):
+    - MarqueeLabel (~> 4.0.0)
+    - SnapKit (~> 5.0.0)
+  - Pageboy (3.6.2)
+  - Parchment (3.0.1)
+  - ProgressHUD (13.6)
+  - RxSwift (6.2.0)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (5.0.1)
+  - Tabman (2.11.1):
+    - Pageboy (~> 3.6.0)
+  - XLActionController/Core (5.1.0)
+  - XLActionController/Twitter (5.1.0):
+    - XLActionController/Core
+  - XLActionController/Youtube (5.1.0):
+    - XLActionController/Core
+  - YNExpandableCell (1.2.1)
+
+DEPENDENCIES:
+  - BRYXBanner
+  - ExpyTableView
+  - FBSDKLoginKit
+  - Kingfisher
+  - Moya
+  - NotificationBannerSwift (= 2.5.0)
+  - Parchment
+  - ProgressHUD
+  - RxSwift
+  - SwiftyJSON
+  - Tabman (~> 2.9)
+  - XLActionController/Twitter
+  - XLActionController/Youtube
+  - YNExpandableCell
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BRYXBanner
+    - ExpyTableView
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Kingfisher
+    - MarqueeLabel
+    - Moya
+    - NotificationBannerSwift
+    - Pageboy
+    - Parchment
+    - ProgressHUD
+    - RxSwift
+    - SnapKit
+    - SwiftyJSON
+    - Tabman
+    - XLActionController
+    - YNExpandableCell
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  BRYXBanner: 4fbd266f96ce000e4c6cc9a0558c446bd88d9801
+  ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
+  FBSDKCoreKit: 0d1ae58388a458b8222f72025804cdc84eb5d0c3
+  FBSDKLoginKit: aea68df6121c5e165ccae2fabfdc83c4644ee40f
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  NotificationBannerSwift: 684966fa934c48b70eff8bbec93fccf8db603365
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  Parchment: 466a1cfb6151780db8acb4bbedc2d9c6bfa1e2ff
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
+  XLActionController: 24140d835ab9e260270711afebc5efabebe9d392
+  YNExpandableCell: f71457eddc5f2d607de5a2aef545325b0b7622e4
+
+PODFILE CHECKSUM: 5e3a3cecce1e63a651b95afdb40d1951a7504a5b
+
+COCOAPODS: 1.10.1
