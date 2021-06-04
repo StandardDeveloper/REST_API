@@ -12,11 +12,13 @@ class VTEcoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
     
-    func bind(imageURLString: String, text: String ) {
+    func bind(imageURLString: String, titleText: String, dataText: String ) {
     
         imageView.kf.setImage(with: URL(string: imageURLString))
-        infoLabel.text = text
+        infoLabel.text = titleText
+        dataLabel.text = dataText
     }
     
 }

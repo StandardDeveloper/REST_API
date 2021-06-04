@@ -20,8 +20,6 @@ class VTEcoViewController: UIViewController {
     var networkProvider = MovieNetworkManager()
     var nowPlaying: [Movie] = []
     
- 
- 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,8 +41,6 @@ class VTEcoViewController: UIViewController {
             
         }
     }
-    
-    
 }
 
 extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -62,13 +58,9 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width: CGFloat = collectionView.frame.width
-        let height: CGFloat = 150
+        let height: CGFloat = 250
         return CGSize(width: width, height: height)
     }
-    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return nowPlaying.count
@@ -77,10 +69,12 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "vtEcoCell", for: indexPath) as! VTEcoCollectionViewCell
-        cell.backgroundColor = .lightGray
+        //cell.backgroundColor = .lightGray
         cell.bind(
             imageURLString: "https://image.tmdb.org/t/p/w500\(nowPlaying[indexPath.row].poster_path)",
-            text: nowPlaying[indexPath.item].title
+            titleText: nowPlaying[indexPath.item].title,
+            dataText: nowPlaying[indexPath.item].release_date
+            
         )
         return cell
     }
@@ -89,7 +83,7 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
 extension VTEcoViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 100.0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -99,8 +93,9 @@ extension VTEcoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         ///  2등분하여 배치, 옆 간격이 1이므로 1을 빼줌
         let width = collectionView.safeAreaLayoutGuide.layoutFrame.width / 2 - inset - lineSpacing
-        let size = CGSize(width: width, height: 240)
+        let size = CGSize(width: width, height: 300)
         return size
     }
     
 }
+

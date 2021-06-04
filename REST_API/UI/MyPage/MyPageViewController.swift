@@ -208,10 +208,6 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
         
         let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 30))
         v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
-        
-        let button = UIButton(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 30))
-        v.addSubview(button)
-        button.backgroundColor = .blue
         return v
     }
     
@@ -297,4 +293,21 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
+}
+
+class DividerView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+//    let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 30))
+//    v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+//    return v
 }

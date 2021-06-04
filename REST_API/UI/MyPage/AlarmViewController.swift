@@ -8,7 +8,7 @@
 import UIKit
 
 class AlarmViewController: UIViewController {
-
+    
     @IBOutlet weak var alarmTableView: UITableView!
     
     lazy var backButton: UIBarButtonItem = {
@@ -21,11 +21,11 @@ class AlarmViewController: UIViewController {
     
     @objc func backBtn(_ sender:UIBarButtonItem!){
         navigationController?.popViewController(animated: true)
-      }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         
@@ -33,7 +33,7 @@ class AlarmViewController: UIViewController {
         navigationItem.leftBarButtonItem = self.backButton
     }
     
-   
+    
 }
 
 extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
@@ -55,12 +55,12 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = "푸시 알림"
             cell.detailTextLabel?.text = "ON"
             return cell
-        
+            
         case 1:
             let cell = alarmTableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! AlarmTableViewCell
             cell.pushLabel.text = "광고성 정보 수신 동의"
             return cell
-     
+            
         default:
             let cell = alarmTableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! AlarmTableViewCell
             cell.pushLabel.text = "야간 수신 동의"
@@ -69,17 +69,17 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
+        
         let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 30))
-                v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
-                return v
-
+        v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+        return v
+        
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let v = UIView(frame: CGRect(x: 50, y:50, width: tableView.frame.width, height: 30))
-                v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+        v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         
         if(section == 0) {
             let footerLabel = UILabel(frame: v.bounds)

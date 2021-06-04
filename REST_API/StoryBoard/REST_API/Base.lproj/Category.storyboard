@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansKR-Black.otf">
+            <string>NotoSansKR-Black</string>
+        </array>
         <array key="NotoSansKR-Regular.otf">
             <string>NotoSansKR-Regular</string>
         </array>
@@ -171,62 +174,81 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y5b-Lg-JFj">
-                                    <size key="itemSize" width="200" height="176"/>
-                                    <size key="headerReferenceSize" width="50" height="150"/>
+                                    <size key="itemSize" width="200" height="273"/>
+                                    <size key="headerReferenceSize" width="50" height="270"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="vtEcoCell" id="MBu-Bu-K4b" customClass="VTEcoCollectionViewCell" customModule="REST_API" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="150" width="200" height="176"/>
+                                        <rect key="frame" x="107" y="270" width="200" height="273"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="QEd-vZ-AHb">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="176"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="273"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmp-JR-cr2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="161.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="209"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="209" id="7uz-97-DfJ"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sj-kS-aet">
-                                                    <rect key="frame" x="0.0" y="161.5" width="110" height="14.5"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="10"/>
+                                                    <rect key="frame" x="0.0" y="219" width="190" height="22"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7Z-Q1-RXq">
+                                                    <rect key="frame" x="0.0" y="246" width="190" height="22"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="4sj-kS-aet" secondAttribute="trailing" constant="90" id="BNx-ca-CgL"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mmp-JR-cr2" secondAttribute="trailing" id="JNy-9v-wVt"/>
-                                                <constraint firstItem="Mmp-JR-cr2" firstAttribute="top" secondItem="QEd-vZ-AHb" secondAttribute="top" id="TkW-fe-FEt"/>
-                                                <constraint firstAttribute="bottom" secondItem="4sj-kS-aet" secondAttribute="bottom" id="UW4-FN-GEA"/>
-                                                <constraint firstItem="4sj-kS-aet" firstAttribute="top" secondItem="Mmp-JR-cr2" secondAttribute="bottom" id="f2q-56-3we"/>
-                                                <constraint firstItem="4sj-kS-aet" firstAttribute="leading" secondItem="QEd-vZ-AHb" secondAttribute="leading" id="mBO-Bq-963"/>
-                                                <constraint firstItem="Mmp-JR-cr2" firstAttribute="leading" secondItem="QEd-vZ-AHb" secondAttribute="leading" id="o2U-A4-2Us"/>
+                                                <constraint firstItem="Mmp-JR-cr2" firstAttribute="top" secondItem="QEd-vZ-AHb" secondAttribute="top" id="0Vi-xD-TVu"/>
+                                                <constraint firstAttribute="trailing" secondItem="4sj-kS-aet" secondAttribute="trailing" constant="10" id="8XF-Ro-qWM"/>
+                                                <constraint firstItem="4sj-kS-aet" firstAttribute="top" secondItem="Mmp-JR-cr2" secondAttribute="bottom" constant="10" id="9EX-og-32X"/>
+                                                <constraint firstItem="4sj-kS-aet" firstAttribute="leading" secondItem="QEd-vZ-AHb" secondAttribute="leading" id="CZ8-rp-7Tl"/>
+                                                <constraint firstAttribute="trailing" secondItem="C7Z-Q1-RXq" secondAttribute="trailing" constant="10" id="DjX-QT-U2w"/>
+                                                <constraint firstItem="C7Z-Q1-RXq" firstAttribute="leading" secondItem="QEd-vZ-AHb" secondAttribute="leading" id="Fia-Ne-jG8"/>
+                                                <constraint firstItem="C7Z-Q1-RXq" firstAttribute="top" secondItem="4sj-kS-aet" secondAttribute="bottom" constant="5" id="Y03-7Y-Rls"/>
+                                                <constraint firstItem="Mmp-JR-cr2" firstAttribute="leading" secondItem="QEd-vZ-AHb" secondAttribute="leading" id="hIu-Fc-vca"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mmp-JR-cr2" secondAttribute="trailing" id="lPV-Qd-RHZ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="273"/>
                                         <connections>
+                                            <outlet property="dataLabel" destination="C7Z-Q1-RXq" id="DEt-a6-Paa"/>
                                             <outlet property="imageView" destination="Mmp-JR-cr2" id="CUR-GY-0bj"/>
                                             <outlet property="infoLabel" destination="4sj-kS-aet" id="KJc-PL-Nan"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resuableBannerView" id="UHv-Kt-vED" customClass="VTEcoCollectionReusableView" customModule="REST_API" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axc-Sg-7wz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNp-Fg-McT">
+                                            <rect key="frame" x="328" y="240" width="66" height="22"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="추천순" image="chevron.down" catalog="system">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="axc-Sg-7wz" secondAttribute="trailing" id="2pu-9b-sk5"/>
-                                        <constraint firstAttribute="trailing" secondItem="axc-Sg-7wz" secondAttribute="trailing" id="3Kg-kU-ZuD"/>
-                                        <constraint firstAttribute="bottom" secondItem="axc-Sg-7wz" secondAttribute="bottom" id="8hY-id-FNp"/>
-                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="leading" secondItem="UHv-Kt-vED" secondAttribute="leading" id="J9y-jf-j18"/>
-                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="leading" secondItem="UHv-Kt-vED" secondAttribute="leading" id="Xpa-k7-isc"/>
-                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="top" secondItem="UHv-Kt-vED" secondAttribute="top" id="jzf-Nc-8hr"/>
-                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="top" secondItem="UHv-Kt-vED" secondAttribute="top" id="oMG-vh-hsv"/>
-                                        <constraint firstAttribute="bottom" secondItem="axc-Sg-7wz" secondAttribute="bottom" id="yKe-SX-Am2"/>
+                                        <constraint firstItem="pNp-Fg-McT" firstAttribute="top" secondItem="axc-Sg-7wz" secondAttribute="bottom" constant="28" id="AeP-Ze-u78"/>
+                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="leading" secondItem="UHv-Kt-vED" secondAttribute="leading" id="JvY-IS-AFh"/>
+                                        <constraint firstAttribute="bottom" secondItem="pNp-Fg-McT" secondAttribute="bottom" constant="8" id="KZb-tR-O3x"/>
+                                        <constraint firstAttribute="trailing" secondItem="axc-Sg-7wz" secondAttribute="trailing" id="psh-0I-TpF"/>
+                                        <constraint firstItem="axc-Sg-7wz" firstAttribute="top" secondItem="UHv-Kt-vED" secondAttribute="top" id="qdO-bB-He4"/>
+                                        <constraint firstAttribute="trailing" secondItem="pNp-Fg-McT" secondAttribute="trailing" constant="20" symbolic="YES" id="vQO-z2-V3E"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="bannerImageView" destination="axc-Sg-7wz" id="dqR-Ox-gG9"/>
@@ -356,6 +378,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="table" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
