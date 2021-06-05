@@ -16,7 +16,7 @@ class MyPageViewController: UIViewController {
     
     @IBOutlet weak var myPageTableView: UITableView!
     
-    var logoutInfoTitle = ["비회원 주문 조회", "배송안내", "공지사항", "자주하는 질문", "고객센터", "이용안내", "컬리소개", "알람 설정" ]
+    var logoutInfoTitle =  ["비회원 주문 조회", "배송안내", "공지사항", "자주하는 질문", "고객센터", "이용안내", "컬리소개", "알람 설정" ]
     var loginInfoTitle_1 = ["적립금", "쿠폰", "친구초대"]
     var loginInfoTitle_2 = ["주문내역", "배송지 관리", "상품 후기", "상품 문의", "1:1 문의", "대량주문 문의"]
     var loginInfoTitle_3 = ["배송안내", "공지사항", "자주하는 질문", "고객센터", "이용안내", "컬리소개", "컬리패스" ]
@@ -26,6 +26,31 @@ class MyPageViewController: UIViewController {
     var networkProvider = AuthNetworkManager()
     let provider = MoyaProvider<AuthAPI>()
     let token = UserDefaults.standard.string(forKey: "token")
+    
+    lazy var shoppingButton: UIBarButtonItem = {
+        let buttonIcon = UIImage(named: "outline_shopping_cart_white_36pt")
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(shoppingBtn(_:)))
+        button.image = buttonIcon
+        button.tintColor = .white
+        return button
+    }()
+    
+    @objc func shoppingBtn(_ sender:UIBarButtonItem!)
+      {
+        
+      }
+    
+    lazy var mapButton: UIBarButtonItem = {
+        let buttonIcon = UIImage(named: "outline_location_on_white_36pt")
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(mapBtn(_:)))
+        button.image = buttonIcon
+        button.tintColor = .white
+        return button
+    }()
+    
+    @objc func mapBtn(_ sender:UIBarButtonItem!){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +62,11 @@ class MyPageViewController: UIViewController {
         myPageTableView.rowHeight = UITableView.automaticDimension
         myPageTableView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        navigationSetup()
         
         self.tabBarController?.tabBar.isHidden = false
         
@@ -60,6 +86,15 @@ class MyPageViewController: UIViewController {
                 self.myPageTableView.reloadData()
             }
         }
+    }
+    
+    func navigationSetup() {
+        
+        navigationItem.title = "마이컬리"
+        navigationItem.rightBarButtonItems = [shoppingButton, mapButton]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0)
+        
     }
     
     @IBAction func moveLoginPage(_ sender: Any) {
@@ -264,19 +299,8 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
                     else {
                         webVC.navTitle = "컬리소개"
                     }
-                    
                 }
-            //                switch indexPath.row {
-            //                case 5:
-            //                    let mainSB = UIStoryboard(name: "Main", bundle: nil)
-            //                    let webVC = mainSB.instantiateViewController(withIdentifier: "webviewvc") as! WebViewController
-            //                    self.navigationController?.pushViewController(webVC, animated: true)
-            //                    webVC.navTitle = logoutInfoTitle[indexPath.row+1]
-            //                    break
-            //                default:
-            //                    break
-            //                }
-            
+                
             //알람
             case 3:
                 switch indexPath.row {
@@ -287,7 +311,6 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
                     break
                 }
                 
-                
             default:
                 print("")
             }
@@ -295,19 +318,3 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-class DividerView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-//    let v = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 30))
-//    v.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
-//    return v
-}

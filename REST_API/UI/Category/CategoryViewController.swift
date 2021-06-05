@@ -33,6 +33,31 @@ class CategoryViewController: UIViewController {
     let babyList: Array<String> = ["베이비・키즈", "전체보기", "분유・간편・이유식", "이유식 재료", "간식・음식・음료", "건강식품", "이유・수유용품", "기저귀・물티슈", "세제・위생용품", "스킨・구강케어", "완구・잡화류"]
     let petList: Array<String> = ["반려동물", "전체보기", "강아지 간식", "강아지 주식", "고양이 간식", "고양이 주식", "반려동물 용품", "배변・위생", "소용량・샘플"]
     
+    lazy var shoppingButton: UIBarButtonItem = {
+       let buttonIcon = UIImage(named: "outline_shopping_cart_white_36pt")
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(shoppingBtn(_:)))
+        button.image = buttonIcon
+        button.tintColor = .white
+        return button
+    }()
+    
+    @objc func shoppingBtn(_ sender:UIBarButtonItem!) {
+        
+    }
+
+    lazy var mapButton: UIBarButtonItem = {
+       let buttonIcon = UIImage(named: "outline_location_on_white_36pt")
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(mapBtn(_:)))
+        button.image = buttonIcon
+        button.tintColor = .white
+        return button
+    }()
+    
+    @objc func mapBtn(_ sender:UIBarButtonItem!) {
+        
+    }
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -43,9 +68,18 @@ class CategoryViewController: UIViewController {
         categoryTableView.rowHeight = UITableView.automaticDimension
         categoryTableView.rowHeight  = 60
         categoryTableView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
+        navigationSetup()
+    }
+    
+    func navigationSetup() {
         self.navigationItem.title = "카테고리"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0)
+        self.navigationItem.rightBarButtonItems = [shoppingButton, mapButton]
     }
 }
 
@@ -253,7 +287,7 @@ extension CategoryViewController: ExpyTableViewDelegate, ExpyTableViewDataSource
         case 18:
             cell.textLabel?.text = petList[indexPath.row]
         default:
-           print("")
+            print("")
         }
         return cell
     }

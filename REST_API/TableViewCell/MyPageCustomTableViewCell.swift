@@ -46,7 +46,7 @@ class MyPageCustomTableViewCell: UITableViewCell {
         loginSignupBtn.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
         loginSignupBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginSignupBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        loginSignupBtn.backgroundColor = .purple
+        loginSignupBtn.backgroundColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0)
         
     }
 

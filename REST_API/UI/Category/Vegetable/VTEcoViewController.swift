@@ -11,8 +11,10 @@ import Kingfisher
 import ProgressHUD
 
 class VTEcoViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let btnKind = ["추천순", "신상품순", "인기상품순", "혜택순", "낮은 가격순", "높은 가격순"]
     
     let lineSpacing: CGFloat = 10
     let inset: CGFloat = 20
@@ -22,17 +24,17 @@ class VTEcoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-    
+        
         getMovieData()
     }
     
     func getMovieData() {
         
         networkProvider.getMovies(target: .nowPlaying) { (results) in
-
+            
             self.nowPlaying = results
             
             OperationQueue.main.addOperation {
@@ -49,7 +51,8 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "resuableBannerView", for: indexPath) as! VTEcoCollectionReusableView
-            headerView.bannerImageView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/6MKr3KgOLmzOP6MSuZERO41Lpkt.jpg"))
+            headerView.bind(imageURLString: "https://image.tmdb.org/t/p/w500/6MKr3KgOLmzOP6MSuZERO41Lpkt.jpg", titleText: "추천순")
+            
             return headerView
         default:
             assert(false)

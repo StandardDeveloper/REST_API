@@ -13,7 +13,6 @@ class VegetableViewController: TabmanViewController {
 
     private var viewControllers: Array<UIViewController> = []
     
-   // let titleName = ["전체보기" : 1, "친환경" : 2, "고구마・감자・당근" : 3, "시금치・쌈채소・나물" : 4, "브로콜리・파프리카・양배추" : 5]
     let titleName = ["전체보기", "친환경", "고구마・감자・당근", "시금치・쌈채소・나물", "브로콜리・파프리카・양배추"]
    
     override func viewDidLoad() {
@@ -24,7 +23,7 @@ class VegetableViewController: TabmanViewController {
         let potatoVC = self.storyboard?.instantiateViewController(identifier: "vtPotatoVC") as! VTPotatoViewController
         let spinachVC = self.storyboard?.instantiateViewController(identifier: "vtSpinachVC") as! VTSpinachViewController
         let broccoliVC = self.storyboard?.instantiateViewController(identifier: "vtBroccoliVC") as! VTBroccoliViewController
-        
+
         viewControllers.append(allVC)
         viewControllers.append(ecoVC)
         viewControllers.append(potatoVC)
@@ -57,7 +56,6 @@ class VegetableViewController: TabmanViewController {
 
 extension VegetableViewController: PageboyViewControllerDataSource ,TMBarDataSource {
 
-    //이것도 물어보기
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         
         let item = TMBarItem(title: "")
@@ -78,17 +76,6 @@ extension VegetableViewController: PageboyViewControllerDataSource ,TMBarDataSou
             item.title = titleName[4]
         }
         
-        
-//        for (name, number) in titleName {
-//            var i = 0
-//            i+=1
-//
-//            if(number == i) {
-//
-//                item.title = name
-//
-//            }
-//        }
         return item
         
     }
@@ -104,6 +91,4 @@ extension VegetableViewController: PageboyViewControllerDataSource ,TMBarDataSou
     func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         return nil
     }
-    
-
 }

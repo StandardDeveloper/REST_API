@@ -28,13 +28,13 @@ class FavoriteProductViewController: UIViewController {
     
     lazy var shoppingButton: UIBarButtonItem = {
         let buttonIcon = UIImage(named: "outline_shopping_cart_white_36pt")
-        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(rightBtn(_:)))
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(shoppingBtn(_:)))
         button.image = buttonIcon
         button.tintColor = .black
         return button
     }()
     
-    @objc func rightBtn(_ sender:UIBarButtonItem!)
+    @objc func shoppingBtn(_ sender:UIBarButtonItem!)
       {
         
       }

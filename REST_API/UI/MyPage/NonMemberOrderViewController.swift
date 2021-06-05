@@ -61,7 +61,7 @@ class NonMemberOrderViewController: UIViewController {
         oderConfirmBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         oderConfirmBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        oderConfirmBtn.backgroundColor = .purple
+        oderConfirmBtn.backgroundColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0)
         oderConfirmBtn.layer.borderColor = UIColor.purple.cgColor
         oderConfirmBtn.layer.cornerRadius = 5
 
