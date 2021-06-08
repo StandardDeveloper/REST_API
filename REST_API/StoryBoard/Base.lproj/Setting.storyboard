@@ -215,18 +215,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="자주하는 질문 베스트 10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqF-Fi-i7n">
-                                                    <rect key="frame" x="10" y="10" width="394" height="34"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="자주하는 질문 베스트 10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqF-Fi-i7n">
+                                                    <rect key="frame" x="10" y="10" width="394" height="35"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="top" secondItem="fkY-M1-HXN" secondAttribute="top" constant="10" id="Xfl-E8-Rlf"/>
-                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="leading" secondItem="fkY-M1-HXN" secondAttribute="leading" constant="10" id="o1P-Pd-PMu"/>
-                                                <constraint firstAttribute="trailing" secondItem="QqF-Fi-i7n" secondAttribute="trailing" constant="10" id="wht-N8-UiN"/>
+                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="leading" secondItem="fkY-M1-HXN" secondAttribute="leading" constant="10" id="A1M-jA-p7f"/>
+                                                <constraint firstAttribute="trailing" secondItem="QqF-Fi-i7n" secondAttribute="trailing" constant="10" id="DrU-fp-97r"/>
+                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="top" secondItem="fkY-M1-HXN" secondAttribute="top" constant="10" id="m2K-az-nnY"/>
+                                                <constraint firstAttribute="bottom" secondItem="QqF-Fi-i7n" secondAttribute="bottom" constant="10" id="uIK-DK-PRJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="showPickerView" destination="QqF-Fi-i7n" id="kZm-Nw-2cG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
