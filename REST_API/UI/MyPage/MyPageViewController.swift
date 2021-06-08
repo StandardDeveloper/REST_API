@@ -248,6 +248,8 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
         //로그인 되어있는 경우
         if(tokenFlag == true) {
             
@@ -277,8 +279,19 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
                 break
             //배송안내
             case 2:
-                if(indexPath.row != 3) {
-                    let mainSB = UIStoryboard(name: "Main", bundle: nil)
+                if (indexPath.row == 2) {
+                    let qestionVC = self.storyboard?.instantiateViewController(identifier: "questionVC") as! QuestionViewController
+                    self.navigationController?.pushViewController(qestionVC, animated: true)
+                    break
+
+                }
+                else if (indexPath.row == 3) {
+                    let serviceCenterVC = self.storyboard?.instantiateViewController(identifier: "serviceCenterVC") as! ServiceCenterViewController
+                    self.navigationController?.pushViewController(serviceCenterVC, animated: true)
+                    serviceCenterVC.naviTitle = "고객센터"
+                    break
+                }
+                else {
                     let webVC = mainSB.instantiateViewController(withIdentifier: "webviewvc") as! WebViewController
                     self.navigationController?.pushViewController(webVC, animated: true)
                     if(indexPath.row == 0) {
@@ -286,9 +299,6 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
                     }
                     else if(indexPath.row == 1) {
                         webVC.navTitle = "공지사항"
-                    }
-                    else if(indexPath.row == 2) {
-                        webVC.navTitle = "자주하는 질문"
                     }
                     else if(indexPath.row == 3) {
                         webVC.navTitle = "고객센터"

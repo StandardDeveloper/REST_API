@@ -15,7 +15,20 @@ class HomeViewController: TabmanViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "market2.jpg")
+        
+        let contentView = UIView()
+        self.navigationItem.titleView = contentView
+        self.navigationItem.titleView?.addSubview(imageView)
+        imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -10).isActive = true
 
+                
         let recommendationVC =  self.storyboard?.instantiateViewController(withIdentifier: "recommendationVC") as! RecommendationViewController
         let newProductVC = self.storyboard?.instantiateViewController(withIdentifier: "newProductVC") as! NewProductViewController
         let bestVC = self.storyboard?.instantiateViewController(withIdentifier: "bestVC") as! BestViewController
