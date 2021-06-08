@@ -13,13 +13,12 @@ class MyPageQuestionTableViewCell: UITableViewCell {
     var selectQuestion = ""
     
     let questions = ["자주하는 질문 베스트 10", "회원문의", "주문/결제", "취소/교환/반품", "배송문의", "쿠폰/적립금", "서비스 이용 및 기타"]
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    
         textFieldSetup()
         pickerViewSetup()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,7 +26,7 @@ class MyPageQuestionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+        
     func textFieldSetup() {
         
         showPickerView.rightViewMode = .always

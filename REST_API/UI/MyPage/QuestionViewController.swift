@@ -11,12 +11,34 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var questionTableView: UITableView!
  
+    lazy var backButton: UIBarButtonItem = {
+        let buttonIcon = UIImage(systemName: "chevron.backward")
+        let button = UIBarButtonItem(title: nil, style: UIBarButtonItem.Style.done, target: self, action: #selector(backBtn(_:)))
+        button.image = buttonIcon
+        button.tintColor = .lightGray
+        return button
+    }()
+    
+    @objc func backBtn(_ sender:UIBarButtonItem!){
+        navigationController?.popViewController(animated: true)
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         questionTableView.delegate = self
         questionTableView.dataSource = self
+        
+        navigationSetup()
+    }
+    
+    func navigationSetup() {
+        
+        navigationItem.title = "자주하는 질문"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.barTintColor = .white
+        navigationItem.leftBarButtonItem = self.backButton
+
     }
 }
 
