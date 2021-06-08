@@ -266,12 +266,12 @@
 			isa = PBXGroup;
 			children = (
 				D2CAE6122652CE3A00DD92E5 /* MyPageViewController.swift */,
-				D2511014266F586D005F4B8A /* QuestionViewController.swift */,
 				D2CAE61A2652DBC500DD92E5 /* LoginPageViewController.swift */,
 				D2D598A32653B80D00B68C36 /* SignupViewController.swift */,
 				D2D2B23526589819007051B7 /* AlarmViewController.swift */,
 				D25EC0322656A2C000CA62BC /* WebViewController.swift */,
 				D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */,
+				D2511014266F586D005F4B8A /* QuestionViewController.swift */,
 				D2511018266F80D2005F4B8A /* ServiceCenterViewController.swift */,
 			);
 			path = MyPage;

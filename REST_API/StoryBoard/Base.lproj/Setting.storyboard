@@ -204,27 +204,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1c-Tq-xRp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1c-Tq-xRp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UoZ-TP-cFY" customClass="MyPageQuestionTableViewCell" customModule="REST_API" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="55" id="UoZ-TP-cFY" customClass="MyPageQuestionTableViewCell" customModule="REST_API" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoZ-TP-cFY" id="fkY-M1-HXN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DuC-CI-Lhd">
-                                                    <rect key="frame" x="5" y="4.5" width="404" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="자주하는 질문 베스트 10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqF-Fi-i7n">
+                                                    <rect key="frame" x="10" y="10" width="394" height="34"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="DuC-CI-Lhd" secondAttribute="bottom" constant="5" id="HP3-lq-yr7"/>
-                                                <constraint firstAttribute="trailing" secondItem="DuC-CI-Lhd" secondAttribute="trailing" constant="5" id="PyU-Jx-m9O"/>
-                                                <constraint firstItem="DuC-CI-Lhd" firstAttribute="leading" secondItem="fkY-M1-HXN" secondAttribute="leading" constant="5" id="sq7-7e-HqZ"/>
+                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="top" secondItem="fkY-M1-HXN" secondAttribute="top" constant="10" id="Xfl-E8-Rlf"/>
+                                                <constraint firstItem="QqF-Fi-i7n" firstAttribute="leading" secondItem="fkY-M1-HXN" secondAttribute="leading" constant="10" id="o1P-Pd-PMu"/>
+                                                <constraint firstAttribute="trailing" secondItem="QqF-Fi-i7n" secondAttribute="trailing" constant="10" id="wht-N8-UiN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -241,12 +241,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="QuestionTableView" destination="g1c-Tq-xRp" id="imk-A6-gWL"/>
+                        <outlet property="questionTableView" destination="g1c-Tq-xRp" id="fux-4g-81r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmx-NU-6E6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3923" y="1434"/>
+            <point key="canvasLocation" x="3921.739130434783" y="1433.7053571428571"/>
         </scene>
         <!--Service Center View Controller-->
         <scene sceneID="eSZ-mc-5mi">
@@ -306,6 +306,11 @@
                                                     <state key="normal" title="카카오톡 문의">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -353,6 +358,11 @@
                                                     <state key="normal" title="1:1 문의 작성">
                                                         <color key="titleColor" white="0.95454545449999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:1 문의에 남겨주시면 답변 드리겠습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-1u-KIB">
                                                     <rect key="frame" x="20" y="52" width="374" height="22"/>
