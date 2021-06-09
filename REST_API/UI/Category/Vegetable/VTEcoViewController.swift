@@ -72,7 +72,6 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "vtEcoCell", for: indexPath) as! VTEcoCollectionViewCell
-        //cell.backgroundColor = .lightGray
         cell.bind(
             imageURLString: "https://image.tmdb.org/t/p/w500\(nowPlaying[indexPath.row].poster_path)",
             titleText: nowPlaying[indexPath.item].title,

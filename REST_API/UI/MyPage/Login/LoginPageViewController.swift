@@ -15,7 +15,7 @@ import NotificationBannerSwift
 import BRYXBanner
 
 class LoginPageViewController: UIViewController {
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
@@ -31,10 +31,10 @@ class LoginPageViewController: UIViewController {
     
     let provider = MoyaProvider<AuthAPI>()
     let userDefaults = UserDefaults()
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ProgressHUD.animationType = .circleRotateChase
         ProgressHUD.colorAnimation = .darkGray
         
@@ -44,25 +44,27 @@ class LoginPageViewController: UIViewController {
     func configrationUI() {
         
         idTextField.translatesAutoresizingMaskIntoConstraints = false
-        idTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60).isActive = true
+        idTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
         idTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         idTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
-        idTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        idTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         pwTextField.translatesAutoresizingMaskIntoConstraints = false
         pwTextField.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 10).isActive = true
         pwTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         pwTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
-        pwTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-       
+        pwTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        pwTextField.isSecureTextEntry = true
+        
         loginBtn.translatesAutoresizingMaskIntoConstraints = false
         loginBtn.layer.cornerRadius = 5
         loginBtn.topAnchor.constraint(equalTo: pwTextField.bottomAnchor, constant: 20).isActive = true
         loginBtn.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         loginBtn.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
-        loginBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        loginBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        loginBtn.backgroundColor = .black
+        loginBtn.backgroundColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0)
+        loginBtn.layer.borderWidth = 1
         
         findIDBtn.translatesAutoresizingMaskIntoConstraints = false
         findIDBtn.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 10).isActive = true
@@ -76,7 +78,7 @@ class LoginPageViewController: UIViewController {
         partitionView.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 30).isActive = true
         partitionView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         partitionView.backgroundColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1)
-                
+        
         findPWBtn.translatesAutoresizingMaskIntoConstraints = false
         findPWBtn.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 10).isActive = true
         findPWBtn.leftAnchor.constraint(equalTo: partitionView.leftAnchor, constant: 20).isActive = true
@@ -88,10 +90,10 @@ class LoginPageViewController: UIViewController {
         signupBtn.topAnchor.constraint(equalTo: partitionView.bottomAnchor, constant: 30).isActive = true
         signupBtn.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         signupBtn.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
-        signupBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        signupBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        signupBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        signupBtn.setTitleColor(UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0), for: UIControl.State.normal)
         signupBtn.backgroundColor = .white
-        signupBtn.layer.borderColor = UIColor.black.cgColor
+        signupBtn.layer.borderColor = UIColor(red: 80/255, green: 10/255, blue: 110/255, alpha: 1.0).cgColor
         signupBtn.layer.borderWidth = 1
         
         partitionView2.translatesAutoresizingMaskIntoConstraints = false
@@ -100,7 +102,7 @@ class LoginPageViewController: UIViewController {
         partitionView2.topAnchor.constraint(equalTo: findPWBtn.bottomAnchor, constant: 100).isActive = true
         partitionView2.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         partitionView2.backgroundColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1)
-     
+        
         loginTypeTextlabel.translatesAutoresizingMaskIntoConstraints = false
         loginTypeTextlabel.font = UIFont.italicSystemFont(ofSize: 13)
         loginTypeTextlabel.topAnchor.constraint(equalTo: findPWBtn.bottomAnchor, constant: 93).isActive = true
@@ -118,10 +120,8 @@ class LoginPageViewController: UIViewController {
         facebookLoginBtn.widthAnchor.constraint(equalToConstant: 50).isActive = true
         facebookLoginBtn.topAnchor.constraint(equalTo: loginTypeTextlabel.bottomAnchor, constant: 20).isActive = true
         facebookLoginBtn.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 50).isActive = true
-
+        
     }
-    
-
     
     @IBAction func loginBtn(_ sender: Any) {
         
@@ -132,42 +132,24 @@ class LoginPageViewController: UIViewController {
             case .success(let res):
                 if(res.statusCode != 200) {
                     
-                    let jsonData = JSON(res.data)
-                    
-                    print("+++++++++++",jsonData)
-                    
-                    let banner = Banner(title: jsonData["error"].string, subtitle: "다시 입력해주세요", image: UIImage(named: "Icon"), backgroundColor: UIColor(red:48.00/255.0, green:174.0/255.0, blue:51.5/255.0, alpha:1.000))
+                    let banner = Banner(title: "", subtitle: "아이디, 비밀번호 확인해주세요.", image: UIImage(named: "Icon"), backgroundColor: UIColor(red:255.0/255.0, green:222.0/255.0, blue:230.0/255.0, alpha:1.000))
                     banner.dismissesOnTap = true
-                    banner.show(duration: 3.0)
-
-
-//                    let Alertvc = UIAlertController(title: "로그인정보 입력 오류", message: "", preferredStyle: UIAlertController.Style.alert)
-//                    let AlertOK = UIAlertAction(title: "확인", style: .default, handler: nil)
-//                    Alertvc.addAction(AlertOK)
-//                    self.present(Alertvc, animated: true, completion: nil)
+                    banner.textColor = UIColor(red:160.0/255.0, green:8.0/255.0, blue:8.0/255.0, alpha:1.000)
+                    banner.show(duration: 2.0)
+                    
                 }
                 else {
-                    
                     let jsonData = JSON(res.data)
                     let tokenInfo = jsonData["token"].string!
                     UserDefaults.standard.set(tokenInfo, forKey: "token")
-                    
                     print("++++Token++++", tokenInfo )
-                    
                     self.dismiss(animated: true, completion: nil)
-//                    let mainvc = self.storyboard?.instantiateViewController(withIdentifier: "mypagevc")
-//                    let window = UIApplication.shared.windows.first
-//                    window?.rootViewController = mainvc
                 }
                 
             case .failure(let err):
                 print(err)
             }
-            
         }
-        
-        
-        
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
@@ -190,43 +172,43 @@ class LoginPageViewController: UIViewController {
                 return
             }
             
-           print("++++++++++", accessToken.tokenString)
+            print("++++++++++", accessToken.tokenString)
             
             //Alamofire
-//            AF.request("http://localhost:3000/users/facebook", method: .get, parameters: ["access_token": accessToken.tokenString]).responseJSON { response in
-//
-//                            switch response.result {
-//
-//                            case .success(let data):
-//                                print("++++++++++++++++", data)
-//                                break
-//                            case .failure(let err):
-//                                print("----------", err)
-//                                break
-//                            }
-//
-//                        }
+            //            AF.request("http://localhost:3000/users/facebook", method: .get, parameters: ["access_token": accessToken.tokenString]).responseJSON { response in
+            //
+            //                            switch response.result {
+            //
+            //                            case .success(let data):
+            //                                print("++++++++++++++++", data)
+            //                                break
+            //                            case .failure(let err):
+            //                                print("----------", err)
+            //                                break
+            //                            }
+            //
+            //                        }
             
             //Moya
-//            provider.request(.facebookLogin(token: accessToken.tokenString)) { response in
-//
-//                switch response {
-//
-//                case .success(let data):
-//                    let jsonData = JSON(data.data)
-//                    print("+++++++++++",jsonData)
-//                    break
-//
-//                case .failure(let err):
-//                    print(err)
-//                    break
-//                }
-//
-//
-//            }
+            //            provider.request(.facebookLogin(token: accessToken.tokenString)) { response in
+            //
+            //                switch response {
+            //
+            //                case .success(let data):
+            //                    let jsonData = JSON(data.data)
+            //                    print("+++++++++++",jsonData)
+            //                    break
+            //
+            //                case .failure(let err):
+            //                    print(err)
+            //                    break
+            //                }
+            //
+            //
+            //            }
             
             
         }
     }
- 
+    
 }

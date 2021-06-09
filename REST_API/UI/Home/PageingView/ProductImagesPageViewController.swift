@@ -80,27 +80,6 @@ class ProductImagesPageViewController: UIPageViewController {
                 }
             }
         }
-    
-//    func configDisplaying(viewController: UIViewController) {
-//
-//        for (index, vc) in controllers.enumerated() {
-//
-//            if (viewController == vc) {
-//                if let proudctImageVC = viewController as? ProductImageViewController {
-//                    proudctImageVC.image = self.images?[index]
-//
-//                    self.pageViewControllerDelegate?.turnPageController(to: index)
-//                }
-//            }
-//        }
-//
-//    }
-    
-    
-    
-    
-    
-    
 }
 
 extension ProductImagesPageViewController: UIPageViewControllerDataSource {

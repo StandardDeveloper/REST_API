@@ -11,30 +11,36 @@ class RecommendationViewController: UIViewController {
     
     @IBOutlet weak var recommendTableView: UITableView!
     
+    var networkProvider = MovieNetworkManager()
+    var nowPlaying: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         recommendTableView.delegate = self
         recommendTableView.dataSource = self
+     
+
+    }
+    
+    func getMovieData() {
         
-        recommendTableView.estimatedRowHeight = recommendTableView.rowHeight
-        recommendTableView.rowHeight = UITableView.automaticDimension
-        
-//        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
-//        header.backgroundColor = .white
-//
-//        let headerLabel = UILabel(frame: header.bounds)
-//        headerLabel.text = "이 상품 어때요?"
-//        headerLabel.textAlignment = .left
-//
-//        header.addSubview(headerLabel)
-//
-//        recommendTableView.tableHeaderView = header
-        
+        networkProvider.getMovies(target: .nowPlaying) { results in
+            
+            self.nowPlaying = results
+            
+            OperationQueue.main.addOperation {
+                self.recommendTableView.reloadData()
+            }
+        }
     }
 }
 
 extension RecommendationViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -49,37 +55,8 @@ extension RecommendationViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 250.0
-        //return UITableView.automaticDimension
+        return 300.0
     }
-    
-
-    
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "이 상품 어때요?"
-    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        let vw = UIView()
-//        vw.backgroundColor = .red//UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-//        let headerLabel = UILabel(frame: vw.bounds)
-//               headerLabel.text = "이 상품 어때요?"
-//               headerLabel.textAlignment = .left
-//
-//        vw.addSubview(headerLabel)
-//        return vw
-//    }
-    
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 20
-//    }
-
-
-
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -88,7 +65,7 @@ extension RecommendationViewController: UITableViewDelegate, UITableViewDataSour
             cell.recommendCollectionView.dataSource = self
             cell.recommendCollectionView.delegate = self
             cell.recommendCollectionView.reloadData()
-        
+            
         }
     }
 }
@@ -107,12 +84,11 @@ extension RecommendationViewController: UICollectionViewDataSource, UICollection
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recommendCollectionCell", for: indexPath) as! RecommendCollectionViewCell
         
-        cell.recommendImageView.image = UIImage(named: "f1")
+        cell.recommendImageView.image = UIImage(named: "f2")
         cell.dataLabel.text = "2,500원"
         cell.infoLabel.text = "친환경 아욱 & 근대 2종"
         return cell
     }
-    
 }
 
 extension RecommendationViewController: UICollectionViewDelegateFlowLayout {
@@ -126,9 +102,7 @@ extension RecommendationViewController: UICollectionViewDelegateFlowLayout {
         }
         
         return CGSize.zero
-        
     }
-    
 }
 
 

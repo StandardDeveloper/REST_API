@@ -19,6 +19,9 @@
 		D2511019266F80D2005F4B8A /* ServiceCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2511018266F80D2005F4B8A /* ServiceCenterViewController.swift */; };
 		D251101B266F817A005F4B8A /* MyPageServiceCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251101A266F817A005F4B8A /* MyPageServiceCenterTableViewCell.swift */; };
 		D251101D266F9071005F4B8A /* MyPageService2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251101C266F9071005F4B8A /* MyPageService2TableViewCell.swift */; };
+		D251101F26708AAB005F4B8A /* FindIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251101E26708AAB005F4B8A /* FindIDViewController.swift */; };
+		D251102126709045005F4B8A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251102026709045005F4B8A /* Alert.swift */; };
+		D251102526709B20005F4B8A /* FindPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251102426709B20005F4B8A /* FindPWViewController.swift */; };
 		D2567C262667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2567C252667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift */; };
 		D25A9284266692C400FC2ECD /* NonMemberOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */; };
 		D25EC0332656A2C000CA62BC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EC0322656A2C000CA62BC /* WebViewController.swift */; };
@@ -28,7 +31,6 @@
 		D25FA2C02661DB9B00D871C5 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D25FA2BA2661DB9B00D871C5 /* NotoSansKR-Bold.otf */; };
 		D25FA2C12661DB9B00D871C5 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D25FA2BB2661DB9B00D871C5 /* NotoSansKR-Medium.otf */; };
 		D25FA2C22661DB9B00D871C5 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D25FA2BC2661DB9B00D871C5 /* NotoSansKR-Light.otf */; };
-		D25FA2C42661DE9500D871C5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA2C32661DE9500D871C5 /* File.swift */; };
 		D25FA2C62661E02000D871C5 /* ProductImageHeardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA2C52661E02000D871C5 /* ProductImageHeardView.swift */; };
 		D25FA2C82661E11400D871C5 /* ProductImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA2C72661E11400D871C5 /* ProductImagesPageViewController.swift */; };
 		D25FA2CB2661E1E700D871C5 /* ProductImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FA2CA2661E1E700D871C5 /* ProductImageViewController.swift */; };
@@ -84,6 +86,9 @@
 		D2511018266F80D2005F4B8A /* ServiceCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterViewController.swift; sourceTree = "<group>"; };
 		D251101A266F817A005F4B8A /* MyPageServiceCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageServiceCenterTableViewCell.swift; sourceTree = "<group>"; };
 		D251101C266F9071005F4B8A /* MyPageService2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService2TableViewCell.swift; sourceTree = "<group>"; };
+		D251101E26708AAB005F4B8A /* FindIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIDViewController.swift; sourceTree = "<group>"; };
+		D251102026709045005F4B8A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D251102426709B20005F4B8A /* FindPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWViewController.swift; sourceTree = "<group>"; };
 		D2567C252667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEcoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonMemberOrderViewController.swift; sourceTree = "<group>"; };
 		D25EC0322656A2C000CA62BC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +98,6 @@
 		D25FA2BA2661DB9B00D871C5 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		D25FA2BB2661DB9B00D871C5 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		D25FA2BC2661DB9B00D871C5 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		D25FA2C32661DE9500D871C5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D25FA2C52661E02000D871C5 /* ProductImageHeardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageHeardView.swift; sourceTree = "<group>"; };
 		D25FA2C72661E11400D871C5 /* ProductImagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImagesPageViewController.swift; sourceTree = "<group>"; };
 		D25FA2CA2661E1E700D871C5 /* ProductImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,25 @@
 			path = AuthModel;
 			sourceTree = "<group>";
 		};
+		D25110222670904B005F4B8A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D251102026709045005F4B8A /* Alert.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D251102326709B09005F4B8A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D2CAE61A2652DBC500DD92E5 /* LoginPageViewController.swift */,
+				D2D598A32653B80D00B68C36 /* SignupViewController.swift */,
+				D251101E26708AAB005F4B8A /* FindIDViewController.swift */,
+				D251102426709B20005F4B8A /* FindPWViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D25FA2B62661DA3F00D871C5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,8 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				D2CAE6122652CE3A00DD92E5 /* MyPageViewController.swift */,
-				D2CAE61A2652DBC500DD92E5 /* LoginPageViewController.swift */,
-				D2D598A32653B80D00B68C36 /* SignupViewController.swift */,
+				D251102326709B09005F4B8A /* Login */,
 				D2D2B23526589819007051B7 /* AlarmViewController.swift */,
 				D25EC0322656A2C000CA62BC /* WebViewController.swift */,
 				D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */,
@@ -362,11 +384,11 @@
 				D282562A265F8DFE0010DC34 /* CollectionViewCell */,
 				D2CAE6192652D8F300DD92E5 /* API */,
 				D2DDCC1D2653F5570099053B /* Model */,
-				D2CAE5FD2652CDEF00DD92E5 /* AppDelegate.swift */,
+				D25110222670904B005F4B8A /* Module */,
 				D2CAE5FF2652CDEF00DD92E5 /* SceneDelegate.swift */,
+				D2CAE5FD2652CDEF00DD92E5 /* AppDelegate.swift */,
 				D2CAE6062652CDEF00DD92E5 /* Assets.xcassets */,
 				D2CAE60B2652CDEF00DD92E5 /* Info.plist */,
-				D25FA2C32661DE9500D871C5 /* File.swift */,
 			);
 			path = REST_API;
 			sourceTree = "<group>";
@@ -542,7 +564,6 @@
 				D2AC8E022658B47C008E378D /* RecommendationViewController.swift in Sources */,
 				D25EC0332656A2C000CA62BC /* WebViewController.swift in Sources */,
 				D2AC8E002658AB91008E378D /* WeekBenefitViewController.swift in Sources */,
-				D25FA2C42661DE9500D871C5 /* File.swift in Sources */,
 				D2D598A42653B80D00B68C36 /* SignupViewController.swift in Sources */,
 				D28256332661050C0010DC34 /* VegetableViewController.swift in Sources */,
 				D28256382661067C0010DC34 /* FruitViewController.swift in Sources */,
@@ -559,10 +580,13 @@
 				D2AC8DF52658AA9C008E378D /* HomeViewController.swift in Sources */,
 				D2CAE6002652CDEF00DD92E5 /* SceneDelegate.swift in Sources */,
 				D282564426610B590010DC34 /* VTPotatoViewController.swift in Sources */,
+				D251101F26708AAB005F4B8A /* FindIDViewController.swift in Sources */,
 				D22F00642667EFD9003DA0FE /* DetailMovie.swift in Sources */,
 				D2CAE61B2652DBC500DD92E5 /* LoginPageViewController.swift in Sources */,
 				D2DDCC1F2653F62C0099053B /* AuthNetworkManager.swift in Sources */,
 				D251101B266F817A005F4B8A /* MyPageServiceCenterTableViewCell.swift in Sources */,
+				D251102126709045005F4B8A /* Alert.swift in Sources */,
+				D251102526709B20005F4B8A /* FindPWViewController.swift in Sources */,
 				D2567C262667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift in Sources */,
 				D282563A2661069D0010DC34 /* SeeFoodViewController.swift in Sources */,
 				D26D9E0D266B0CE200C3300C /* RecommendationTableViewCell.swift in Sources */,
