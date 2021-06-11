@@ -202,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="1711.5942028985507" y="802.90178571428567"/>
         </scene>
-        <!--Vegetable View Controller-->
+        <!--Main Category View Controller-->
         <scene sceneID="PqR-Zs-i3l">
             <objects>
-                <viewController storyboardIdentifier="vegetableVC" id="pXq-A8-AWT" customClass="VegetableViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainCategoryVC" id="pXq-A8-AWT" customClass="MainCategoryViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zta-48-c5d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,25 +217,10 @@
             </objects>
             <point key="canvasLocation" x="1712" y="1505"/>
         </scene>
-        <!--All View Controller-->
-        <scene sceneID="JWe-RO-PW5">
-            <objects>
-                <viewController storyboardIdentifier="vtAllVC" id="K90-O2-LlK" customClass="VTAllViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VCo-28-2xq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="BFs-Pn-Zzf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="waO-Il-4fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2622" y="1505"/>
-        </scene>
-        <!--Eco View Controller-->
+        <!--Category Data View Controller-->
         <scene sceneID="J1q-Jd-yt1">
             <objects>
-                <viewController storyboardIdentifier="vtEcoVC" id="iKg-Tp-GhB" customClass="VTEcoViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categoryDataVC" id="iKg-Tp-GhB" customClass="CategoryDataViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cvj-o4-QfB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,104 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJ3-gU-xT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="1504.6875"/>
-        </scene>
-        <!--Potato View Controller-->
-        <scene sceneID="m7N-Dg-ltI">
-            <objects>
-                <viewController storyboardIdentifier="vtPotatoVC" id="eVc-4j-g9k" customClass="VTPotatoViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BTX-mn-bdv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-cy-huX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n1U-25-VWb">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="IkT-qU-9xO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Hay-cy-huX" firstAttribute="leading" secondItem="IkT-qU-9xO" secondAttribute="leading" id="3tv-0g-KIU"/>
-                            <constraint firstItem="IkT-qU-9xO" firstAttribute="trailing" secondItem="Hay-cy-huX" secondAttribute="trailing" id="C87-1Y-bvr"/>
-                            <constraint firstItem="IkT-qU-9xO" firstAttribute="bottom" secondItem="Hay-cy-huX" secondAttribute="bottom" id="MOj-NF-NgL"/>
-                            <constraint firstItem="Hay-cy-huX" firstAttribute="top" secondItem="IkT-qU-9xO" secondAttribute="top" id="xmW-6N-LWj"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="potatoCollectionView" destination="Hay-cy-huX" id="Ctv-zy-DRk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WyK-0d-6fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4086" y="1505"/>
-        </scene>
-        <!--Spinach View Controller-->
-        <scene sceneID="bLz-Qb-Xch">
-            <objects>
-                <viewController storyboardIdentifier="vtSpinachVC" id="Z3M-bE-l59" customClass="VTSpinachViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZKt-v4-I82">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="jkF-GB-dFQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1m-hF-OLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4809" y="1505"/>
-        </scene>
-        <!--Broccoli View Controller-->
-        <scene sceneID="BG2-MH-dQK">
-            <objects>
-                <viewController storyboardIdentifier="vtBroccoliVC" id="NgN-tH-4a7" customClass="VTBroccoliViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E7F-bC-Fk3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ck2-tT-xLl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eF8-j1-X7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5529" y="1505"/>
-        </scene>
-        <!--Fruit View Controller-->
-        <scene sceneID="sIR-Ut-iDf">
-            <objects>
-                <viewController storyboardIdentifier="fruitVC" id="O4h-S3-RDi" customClass="FruitViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fh0-6v-LzH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Kxx-9P-JfB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yMb-ci-WQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1712" y="2201"/>
-        </scene>
-        <!--See Food View Controller-->
-        <scene sceneID="VvW-bg-dmR">
-            <objects>
-                <viewController storyboardIdentifier="seeFoodVC" id="jSl-7R-toC" customClass="SeeFoodViewController" customModule="REST_API" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="chJ-o4-Fbh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xLj-c4-UdD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UmA-zU-EPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1712" y="2879"/>
+            <point key="canvasLocation" x="2425" y="1505"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,7 @@
 		D251101F26708AAB005F4B8A /* FindIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251101E26708AAB005F4B8A /* FindIDViewController.swift */; };
 		D251102126709045005F4B8A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251102026709045005F4B8A /* Alert.swift */; };
 		D251102526709B20005F4B8A /* FindPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251102426709B20005F4B8A /* FindPWViewController.swift */; };
+		D2511027267329FD005F4B8A /* CategoryPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2511026267329FD005F4B8A /* CategoryPodViewController.swift */; };
 		D2567C262667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2567C252667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift */; };
 		D25A9284266692C400FC2ECD /* NonMemberOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */; };
 		D25EC0332656A2C000CA62BC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EC0322656A2C000CA62BC /* WebViewController.swift */; };
@@ -38,14 +39,8 @@
 		D26D9E0D266B0CE200C3300C /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D9E0C266B0CE200C3300C /* RecommendationTableViewCell.swift */; };
 		D26D9E12266B0F6F00C3300C /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D9E11266B0F6F00C3300C /* RecommendCollectionViewCell.swift */; };
 		D28256302660BD300010DC34 /* FavoriteProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282562F2660BD300010DC34 /* FavoriteProductViewController.swift */; };
-		D28256332661050C0010DC34 /* VegetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28256322661050C0010DC34 /* VegetableViewController.swift */; };
-		D28256382661067C0010DC34 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28256372661067C0010DC34 /* FruitViewController.swift */; };
-		D282563A2661069D0010DC34 /* SeeFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28256392661069D0010DC34 /* SeeFoodViewController.swift */; };
-		D282564226610B360010DC34 /* VTEcoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564126610B360010DC34 /* VTEcoViewController.swift */; };
-		D282564426610B590010DC34 /* VTPotatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564326610B590010DC34 /* VTPotatoViewController.swift */; };
-		D282564626610B750010DC34 /* VTAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564526610B750010DC34 /* VTAllViewController.swift */; };
-		D282564826610B940010DC34 /* VTSpinachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564726610B940010DC34 /* VTSpinachViewController.swift */; };
-		D282564A26610BB60010DC34 /* VTBroccoliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564926610BB60010DC34 /* VTBroccoliViewController.swift */; };
+		D28256332661050C0010DC34 /* MainCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28256322661050C0010DC34 /* MainCategoryViewController.swift */; };
+		D282564226610B360010DC34 /* CategoryDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282564126610B360010DC34 /* CategoryDataViewController.swift */; };
 		D2AC8DF22658A9F6008E378D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AC8DF02658A9F6008E378D /* Home.storyboard */; };
 		D2AC8DF52658AA9C008E378D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC8DF42658AA9C008E378D /* HomeViewController.swift */; };
 		D2AC8DFA2658AB0D008E378D /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC8DF92658AB0D008E378D /* NewProductViewController.swift */; };
@@ -89,6 +84,7 @@
 		D251101E26708AAB005F4B8A /* FindIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIDViewController.swift; sourceTree = "<group>"; };
 		D251102026709045005F4B8A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D251102426709B20005F4B8A /* FindPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWViewController.swift; sourceTree = "<group>"; };
+		D2511026267329FD005F4B8A /* CategoryPodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPodViewController.swift; sourceTree = "<group>"; };
 		D2567C252667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEcoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D25A9283266692C400FC2ECD /* NonMemberOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonMemberOrderViewController.swift; sourceTree = "<group>"; };
 		D25EC0322656A2C000CA62BC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -105,14 +101,8 @@
 		D26D9E0C266B0CE200C3300C /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		D26D9E11266B0F6F00C3300C /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		D282562F2660BD300010DC34 /* FavoriteProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProductViewController.swift; sourceTree = "<group>"; };
-		D28256322661050C0010DC34 /* VegetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableViewController.swift; sourceTree = "<group>"; };
-		D28256372661067C0010DC34 /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
-		D28256392661069D0010DC34 /* SeeFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeFoodViewController.swift; sourceTree = "<group>"; };
-		D282564126610B360010DC34 /* VTEcoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEcoViewController.swift; sourceTree = "<group>"; };
-		D282564326610B590010DC34 /* VTPotatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTPotatoViewController.swift; sourceTree = "<group>"; };
-		D282564526610B750010DC34 /* VTAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTAllViewController.swift; sourceTree = "<group>"; };
-		D282564726610B940010DC34 /* VTSpinachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTSpinachViewController.swift; sourceTree = "<group>"; };
-		D282564926610BB60010DC34 /* VTBroccoliViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTBroccoliViewController.swift; sourceTree = "<group>"; };
+		D28256322661050C0010DC34 /* MainCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryViewController.swift; sourceTree = "<group>"; };
+		D282564126610B360010DC34 /* CategoryDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataViewController.swift; sourceTree = "<group>"; };
 		D2AC8DF12658A9F6008E378D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = REST_API/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		D2AC8DF42658AA9C008E378D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D2AC8DF92658AB0D008E378D /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
@@ -277,10 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				D23507C0265A410200E2FC71 /* CategoryViewController.swift */,
+				D2511026267329FD005F4B8A /* CategoryPodViewController.swift */,
 				D282562F2660BD300010DC34 /* FavoriteProductViewController.swift */,
-				D282563C266109F70010DC34 /* Vegetable */,
-				D282563D26610A2C0010DC34 /* Fruit */,
-				D282563E26610A380010DC34 /* SeeFood */,
+				D28256322661050C0010DC34 /* MainCategoryViewController.swift */,
+				D282564126610B360010DC34 /* CategoryDataViewController.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -309,35 +299,6 @@
 				D23507BD265A3FD300E2FC71 /* Category.storyboard */,
 			);
 			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		D282563C266109F70010DC34 /* Vegetable */ = {
-			isa = PBXGroup;
-			children = (
-				D28256322661050C0010DC34 /* VegetableViewController.swift */,
-				D282564526610B750010DC34 /* VTAllViewController.swift */,
-				D282564126610B360010DC34 /* VTEcoViewController.swift */,
-				D282564326610B590010DC34 /* VTPotatoViewController.swift */,
-				D282564726610B940010DC34 /* VTSpinachViewController.swift */,
-				D282564926610BB60010DC34 /* VTBroccoliViewController.swift */,
-			);
-			path = Vegetable;
-			sourceTree = "<group>";
-		};
-		D282563D26610A2C0010DC34 /* Fruit */ = {
-			isa = PBXGroup;
-			children = (
-				D28256372661067C0010DC34 /* FruitViewController.swift */,
-			);
-			path = Fruit;
-			sourceTree = "<group>";
-		};
-		D282563E26610A380010DC34 /* SeeFood */ = {
-			isa = PBXGroup;
-			children = (
-				D28256392661069D0010DC34 /* SeeFoodViewController.swift */,
-			);
-			path = SeeFood;
 			sourceTree = "<group>";
 		};
 		D2AC8DF32658AA75008E378D /* Home */ = {
@@ -564,9 +525,9 @@
 				D2AC8E022658B47C008E378D /* RecommendationViewController.swift in Sources */,
 				D25EC0332656A2C000CA62BC /* WebViewController.swift in Sources */,
 				D2AC8E002658AB91008E378D /* WeekBenefitViewController.swift in Sources */,
+				D2511027267329FD005F4B8A /* CategoryPodViewController.swift in Sources */,
 				D2D598A42653B80D00B68C36 /* SignupViewController.swift in Sources */,
-				D28256332661050C0010DC34 /* VegetableViewController.swift in Sources */,
-				D28256382661067C0010DC34 /* FruitViewController.swift in Sources */,
+				D28256332661050C0010DC34 /* MainCategoryViewController.swift in Sources */,
 				D2511015266F586D005F4B8A /* QuestionViewController.swift in Sources */,
 				D28256302660BD300010DC34 /* FavoriteProductViewController.swift in Sources */,
 				D25FA2C62661E02000D871C5 /* ProductImageHeardView.swift in Sources */,
@@ -579,7 +540,6 @@
 				D2AC8DFE2658AB4D008E378D /* ShoppingViewController.swift in Sources */,
 				D2AC8DF52658AA9C008E378D /* HomeViewController.swift in Sources */,
 				D2CAE6002652CDEF00DD92E5 /* SceneDelegate.swift in Sources */,
-				D282564426610B590010DC34 /* VTPotatoViewController.swift in Sources */,
 				D251101F26708AAB005F4B8A /* FindIDViewController.swift in Sources */,
 				D22F00642667EFD9003DA0FE /* DetailMovie.swift in Sources */,
 				D2CAE61B2652DBC500DD92E5 /* LoginPageViewController.swift in Sources */,
@@ -588,7 +548,6 @@
 				D251102126709045005F4B8A /* Alert.swift in Sources */,
 				D251102526709B20005F4B8A /* FindPWViewController.swift in Sources */,
 				D2567C262667FAB000C9ABE0 /* VTEcoCollectionViewCell.swift in Sources */,
-				D282563A2661069D0010DC34 /* SeeFoodViewController.swift in Sources */,
 				D26D9E0D266B0CE200C3300C /* RecommendationTableViewCell.swift in Sources */,
 				D22F00622667EFC4003DA0FE /* Movie.swift in Sources */,
 				D2511017266F590D005F4B8A /* MyPageQuestionTableViewCell.swift in Sources */,
@@ -596,18 +555,15 @@
 				D2AC8DFC2658AB19008E378D /* BestViewController.swift in Sources */,
 				D25FA2CB2661E1E700D871C5 /* ProductImageViewController.swift in Sources */,
 				D2D598A22653B3E700B68C36 /* AuthAPI.swift in Sources */,
-				D282564226610B360010DC34 /* VTEcoViewController.swift in Sources */,
+				D282564226610B360010DC34 /* CategoryDataViewController.swift in Sources */,
 				D25FA2CD2661ED1D00D871C5 /* Product.swift in Sources */,
-				D282564826610B940010DC34 /* VTSpinachViewController.swift in Sources */,
 				D2511019266F80D2005F4B8A /* ServiceCenterViewController.swift in Sources */,
-				D282564626610B750010DC34 /* VTAllViewController.swift in Sources */,
 				D2CAE6162652CFE200DD92E5 /* MyPageCustomTableViewCell.swift in Sources */,
 				D26D9E12266B0F6F00C3300C /* RecommendCollectionViewCell.swift in Sources */,
 				D2D2B23826589841007051B7 /* AlarmTableViewCell.swift in Sources */,
 				D22F005C2667EF40003DA0FE /* MovieNetworkManager.swift in Sources */,
 				D2D598A62653E53600B68C36 /* LoginTableViewCell.swift in Sources */,
 				D2E34F5D26692B350025163C /* VTEcoCollectionReusableView.swift in Sources */,
-				D282564A26610BB60010DC34 /* VTBroccoliViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

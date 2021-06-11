@@ -1,5 +1,5 @@
 //
-//  VTEcoViewController.swift
+//  CategoryDataViewController.swift
 //  REST_API
 //
 //  Created by 이민욱 on 2021/05/28.
@@ -10,7 +10,9 @@ import Moya
 import Kingfisher
 import ProgressHUD
 
-class VTEcoViewController: UIViewController {
+class CategoryDataViewController: UIViewController {
+    
+    var categoryData = Section()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,6 +26,9 @@ class VTEcoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        print("++++++++", categoryData.title)
+        print("--------", categoryData.data)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -45,7 +50,7 @@ class VTEcoViewController: UIViewController {
     }
 }
 
-extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CategoryDataViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
@@ -82,7 +87,7 @@ extension VTEcoViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
-extension VTEcoViewController: UICollectionViewDelegateFlowLayout {
+extension CategoryDataViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

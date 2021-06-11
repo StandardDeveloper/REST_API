@@ -1,5 +1,5 @@
 //
-//  VegetableViewController.swift
+//  MainCategoryViewController.swift
 //  REST_API
 //
 //  Created by 이민욱 on 2021/05/28.
@@ -9,28 +9,23 @@ import UIKit
 import Tabman
 import Pageboy
 
-class VegetableViewController: TabmanViewController {
+class MainCategoryViewController: TabmanViewController {
+    
+    var section = Section()
 
     private var viewControllers: Array<UIViewController> = []
     
-    let titleName = ["전체보기", "친환경", "고구마・감자・당근", "시금치・쌈채소・나물", "브로콜리・파프리카・양배추"]
-   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let allVC = self.storyboard?.instantiateViewController(identifier: "vtAllVC") as! VTAllViewController
-        let ecoVC = self.storyboard?.instantiateViewController(identifier: "vtEcoVC") as! VTEcoViewController
-        let potatoVC = self.storyboard?.instantiateViewController(identifier: "vtPotatoVC") as! VTPotatoViewController
-        let spinachVC = self.storyboard?.instantiateViewController(identifier: "vtSpinachVC") as! VTSpinachViewController
-        let broccoliVC = self.storyboard?.instantiateViewController(identifier: "vtBroccoliVC") as! VTBroccoliViewController
-
-        viewControllers.append(allVC)
-        viewControllers.append(ecoVC)
-        viewControllers.append(potatoVC)
-        viewControllers.append(spinachVC)
-        viewControllers.append(broccoliVC)
+                
+        for _ in section.data {
+            let allVC = self.storyboard?.instantiateViewController(identifier: "categoryDataVC") as! CategoryDataViewController
+            allVC.categoryData = section
+            viewControllers.append(allVC)
+        }
         
         self.dataSource = self
+        self.delegate = self
         
         let bar = TMBar.ButtonBar()
         bar.backgroundColor = .white
@@ -54,30 +49,14 @@ class VegetableViewController: TabmanViewController {
     }
 }
 
-extension VegetableViewController: PageboyViewControllerDataSource ,TMBarDataSource {
+extension MainCategoryViewController: PageboyViewControllerDataSource,TMBarDataSource {
 
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         
         let item = TMBarItem(title: "")
-        
-        if(index == 0) {
-            item.title = titleName[0]
-        }
-        else if(index == 1) {
-            item.title = titleName[1]
-        }
-        else if(index == 2) {
-            item.title = titleName[2]
-        }
-        else if(index == 3) {
-            item.title = titleName[3]
-        }
-        else {
-            item.title = titleName[4]
-        }
+        item.title = section.data[index]
         
         return item
-        
     }
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
