@@ -47,24 +47,42 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expendingCell" textLabel="bnl-uz-O1b" style="IBUITableViewCellStyleDefault" id="63C-gG-bXd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expendingCell" id="63C-gG-bXd" customClass="CategoryCustomTableViewCell" customModule="REST_API" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="63C-gG-bXd" id="CUq-tu-5Vs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bnl-uz-O1b">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-mg-suV">
+                                                    <rect key="frame" x="352" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FU-O4-Cre">
+                                                    <rect key="frame" x="70" y="10" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="bRi-sl-WZB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1FU-O4-Cre" firstAttribute="top" secondItem="CUq-tu-5Vs" secondAttribute="topMargin" constant="-1" id="UbU-Ar-wiT"/>
+                                                <constraint firstItem="jLw-mg-suV" firstAttribute="centerY" secondItem="CUq-tu-5Vs" secondAttribute="centerY" id="efh-pB-AA3"/>
+                                                <constraint firstAttribute="trailing" secondItem="jLw-mg-suV" secondAttribute="trailing" constant="20" id="iuO-zZ-Pnq"/>
+                                                <constraint firstItem="1FU-O4-Cre" firstAttribute="leading" secondItem="CUq-tu-5Vs" secondAttribute="leadingMargin" constant="50" id="nfM-YV-XHg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoLabel" destination="jLw-mg-suV" id="9Gj-rF-lxo"/>
+                                            <outlet property="nameLabel" destination="1FU-O4-Cre" id="d23-7K-Moy"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCustomCell" rowHeight="221" id="Tj7-9N-OyY" customClass="CategoryCustomTableViewCell" customModule="REST_API" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCustomCell" rowHeight="221" id="Tj7-9N-OyY" customClass="CategoryCollectionTableViewCell" customModule="REST_API" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="414" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tj7-9N-OyY" id="kYn-eJ-NK8">
@@ -235,7 +253,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="vtEcoCell" id="MBu-Bu-K4b" customClass="VTEcoCollectionViewCell" customModule="REST_API" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryDataCell" id="MBu-Bu-K4b" customClass="CategoryDataCollectionViewCell" customModule="REST_API" customModuleProvider="target">
                                         <rect key="frame" x="107" y="270" width="200" height="273"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="QEd-vZ-AHb">
@@ -281,7 +299,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resuableBannerView" id="UHv-Kt-vED" customClass="VTEcoCollectionReusableView" customModule="REST_API" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resuableBannerView" id="UHv-Kt-vED" customClass="CategoryDataCollectionReusableView" customModule="REST_API" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
