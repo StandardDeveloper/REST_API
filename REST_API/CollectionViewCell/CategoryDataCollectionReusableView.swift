@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VTEcoCollectionReusableView: UICollectionReusableView {
+class CategoryDataCollectionReusableView: UICollectionReusableView {
 
     
     @IBOutlet weak var bannerImageView: UIImageView!

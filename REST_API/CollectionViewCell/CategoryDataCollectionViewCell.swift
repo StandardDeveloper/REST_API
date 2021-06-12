@@ -1,5 +1,5 @@
 //
-//  VTEcoCollectionViewCell.swift
+//  CategoryDataCollectionViewCell.swift
 //  REST_API
 //
 //  Created by 이민욱 on 2021/06/03.
@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class VTEcoCollectionViewCell: UICollectionViewCell {
+class CategoryDataCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
