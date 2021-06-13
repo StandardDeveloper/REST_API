@@ -20,7 +20,7 @@ class RecommendationViewController: UIViewController {
         recommendTableView.delegate = self
         recommendTableView.dataSource = self
      
-
+        getMovieData()
     }
     
     func getMovieData() {
@@ -77,7 +77,8 @@ extension RecommendationViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        print(nowPlaying.count)
+        return nowPlaying.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -85,8 +86,9 @@ extension RecommendationViewController: UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recommendCollectionCell", for: indexPath) as! RecommendCollectionViewCell
         
         cell.recommendImageView.image = UIImage(named: "f2")
-        cell.dataLabel.text = "2,500원"
-        cell.infoLabel.text = "친환경 아욱 & 근대 2종"
+        cell.dataLabel.text = nowPlaying[indexPath.row].title
+//        cell.dataLabel.text = "2,500원"
+//        cell.infoLabel.text = "친환경 아욱 & 근대 2종"
         return cell
     }
 }
